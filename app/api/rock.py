@@ -1,19 +1,15 @@
-import sys
 from model.rock_lenet import lenet_rock_model
 import numpy as np
 from fastapi import APIRouter, UploadFile, File
 from fastapi.responses import JSONResponse
 import io
 from PIL import Image
-from tensorflow.keras.models import load_model
-import json
-import asyncio
+
 from fastapi import UploadFile
-from starlette.datastructures import UploadFile as StarletteUploadFile
+
 
 rock_router = APIRouter()
 
-# lenet_rock_model = load_model ('models/weights/lenet_rock.weights.h5') 
 
 def preprocess_image(file: UploadFile, target_size=(32, 32)) -> np.ndarray:
     """

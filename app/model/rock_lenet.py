@@ -2,7 +2,6 @@ import tensorflow as tf
 import numpy as np
 
 
-from tensorflow.keras.models import load_model 
 
 
 class LeNetRockModel:
@@ -34,7 +33,7 @@ class LeNetRockModel:
         img: numpy array shape (1, IMG_SIZE_LENET_ROCK, IMG_SIZE_LENET_ROCK, 3)
         """
         
-        # self.model.load_weights(r"app\model\weights\lenet_concrete_crack.weights.h5")
+        
         preds = self.model.predict(img)
         print (preds)
         # Nếu là binary classification, trả về 0 hoặc 1
