@@ -25,5 +25,3 @@ Mô hình LeNet bao gồm:
 
 ---
 
-## 📂 Cấu trúc thư mục
-
